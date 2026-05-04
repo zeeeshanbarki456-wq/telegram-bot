@@ -1,7 +1,8 @@
 import requests
 import time
 
-BOT_TOKEN = "APNA_TOKEN_YAHAN"
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 BASE_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 def get_updates(offset=None):
